@@ -11,6 +11,9 @@ import UIKit
 
 class BeautyLabel : UILabel {
 
+    @IBInspectable var cornerRadius:CGFloat = 0
+    @IBInspectable var cornerColor:UIColor = UIColor.clearColor()
+    @IBInspectable var cornerWidth:CGFloat = 0
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,8 +31,9 @@ class BeautyLabel : UILabel {
     }
     
     func setup() {
-        self.text = self.text
-        self.textColor = self.textColor
-        self.font = self.font
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderWidth = 1
+        self.layer.borderColor = cornerColor.CGColor
+        self.clipsToBounds = true
     }
 }
