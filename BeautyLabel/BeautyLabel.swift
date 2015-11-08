@@ -6,16 +6,18 @@
 //  Copyright (c) 2015 ccs. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class BeautyLabel : UILabel {
+@IBDesignable
 
+class BeautyLabel : UILabel {
+    
+    @IBInspectable var labelColor:UIColor = UIColor.clearColor()
     @IBInspectable var cornerRadius:CGFloat = 0
     @IBInspectable var cornerColor:UIColor = UIColor.clearColor()
     @IBInspectable var cornerWidth:CGFloat = 0
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -31,6 +33,7 @@ class BeautyLabel : UILabel {
     }
     
     func setup() {
+        self.backgroundColor = labelColor
         self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = 1
         self.layer.borderColor = cornerColor.CGColor

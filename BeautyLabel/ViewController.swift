@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var newLabel = BeautyLabel()
+        let newLabel = BeautyLabel()
     }
 }
 
