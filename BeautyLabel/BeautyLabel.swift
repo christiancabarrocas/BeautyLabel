@@ -8,9 +8,7 @@
 
 import UIKit
 
-@IBDesignable
-
-class BeautyLabel : UILabel {
+@IBDesignable class BeautyLabel : UILabel {
     
     @IBInspectable var labelColor:UIColor = UIColor.clearColor()
     @IBInspectable var cornerRadius:CGFloat = 0
